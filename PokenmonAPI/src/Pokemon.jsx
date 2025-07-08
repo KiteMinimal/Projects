@@ -4,6 +4,8 @@ import "./index.css";
 const Pokemon = () => {
   const [pokemonName, setPokemonName] = useState([]);
   const [pokemonImage, setPokemonImage] = useState("");
+  const [search, setSearch] = useState("");
+
 
   const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=30";
 
@@ -40,22 +42,50 @@ const Pokemon = () => {
     fetchPokemonAPI();
   }, []);
 
+  //Search functionality
+
+  const handleSearch = pokemonName.filter(value => value.name.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <section className="container">
       <header>
         <h1>Let's Catch Pokemon</h1>
       </header>
+      <div className="pokemon-search">
+        <input type="text" placeholder="Search Pokmon" value={search} onChange={e => setSearch(e.target.value)} />
+      </div>
       <div style={{ margin: "2rem" }}>
         <ul className="cards">
-          {pokemonName.map((pokemon, idx) => {
+          {handleSearch.map((pokemon, idx) => {
             return (
               <li key={idx} className="pokemon-card">
                 <figure>
                   <img className="pokemon-image" src={pokemon.sprites.front_default} alt={pokemon.name} />
-                  <h2>{pokemon.name}</h2>
-                  <p>Height: {pokemon.height}</p>
-                  <p>Weight: {pokemon.weight}</p>
                 </figure>
+                <h1 className="pokemon-name">{pokemon.name}</h1>
+                <div className="pokemon-info pokemon-hightlight">
+                  <p>
+                    {
+                      pokemon.types.map((type, inx) => type.type.name).join(", ")
+                    }
+                  </p>
+                </div>
+                <div className="grid-three-cols">
+                  <p className="pokemon-info">
+                    <span>Height:</span> {pokemon.height}
+                  </p>
+                  
+                  <p className="pokemon-info">
+                    <span>Weight:</span> {pokemon.weight}
+                  </p>
+                  <p className="pokemon-info">
+                    <span>Speed:</span> {pokemon.stats[5].base_stat}
+                  </p>
+                  <p>
+                    {pokemon.abilities.map(ability => ability.ability.name).splice(0, 1)}
+                    
+                  </p>
+                </div>
               </li>
             );
           })}
