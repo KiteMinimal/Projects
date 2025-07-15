@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Commerce Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <header class="section-navbar">
+      <!-- header section -->
+      <section class="top-txt">
+        <div class="head container">
+          <div class="head_txt">
+            <p>Free shiping, 30-days return on refund guarantee</p>
+          </div>
+          <div class="sing_in_up">
+            <a href="#">Sign In</a>
+            <a href="#">Sign Up</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navbar section -->
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img
+              src="/public/logoipsum-250.svg"
+              alt=""
+              style="
+                width: 100%;
+                height: 100%;
+                max-width: 150px;
+                max-height: 50px;
+              "
+            />
+          </a>
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="product.html" class="nav-link">Product</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="addToCart.html"
+                class="nav-link add-to-cart-button"
+                id="cartValue"
+                ><i
+                  class="fa-solid fa-cart-shopping"
+                  style="color: aliceblue"
+                ></i
+                >{4}</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Start Home Hero Section -->
+    <main>
+      <section class="section-hero">
+        <div class="container grid grid-two--cols">
+          <div class="section-hero--content">
+            <p class="hero-subheading">
+              Explore the lastest in Tech industries
+            </p>
+            <h1 class="hero-heading">
+              Your Destination For Cutting Edge Gudgets!
+            </h1>
+            <p class="hero-para">
+              Welcome to our e-commerce website, where you can find the latest
+              and greatest in technology. From smartphones to laptops, we have
+              everything you need to stay connected and productive.
+            </p>
+          </div>
+          <div
+            class="section-hero-image"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+          <figure>
+            <img src="/public/e-commerce.avif" alt="coding language using html css and javascript" />
+          </figure>
+        </div>
+        </div>
+      </section>
+    </main>
+    <!-- End Home Hero Section -->
+
+    <!-- Start Extra Products Section -->
+     <section class="section-extra-product">
+      <div class="container grid grid-three-cols">
+        <div class="div-extra grid grid-two-cols">
+          <div class="extra-text">
+            <p>New Year Sale</p>
+            <h3>get an extra 50% off</h3>
+            <a href="#">Show Now</a>
+          </div>
+          <div class="extra-img extra-laptop">
+            <img src="/public/e-com.svg" alt="">
+          </div>
+        </div>
+        <div class="div-extra grid grid-two-cols">
+          <div class="extra-text">
+            <p>New Year Sale</p>
+            <h3>get an extra 50% off</h3>
+            <a href="#">Show Now</a>
+          </div>
+          <div class="extra-img extra-laptop">
+            <img src="/public/e-com.svg" alt="">
+          </div>
+        </div>
+        <div class="div-extra grid grid-two-cols">
+          <div class="extra-text">
+            <p>New Year Sale</p>
+            <h3>get an extra 50% off</h3>
+            <a href="#">Show Now</a>
+          </div>
+          <div class="extra-img extra-laptop">
+            <img src="/public/e-com.svg" alt="">
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- End Extra Products Section -->
+
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
